@@ -1,4 +1,4 @@
-# FBFriends
+# FBFriends - iOS
 ### Facebook Login
 ### Facebook Graph-API
 
