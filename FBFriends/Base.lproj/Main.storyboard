@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZZK-6u-Mob">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Login View-->
+        <scene sceneID="Kef-tz-N52">
+            <objects>
+                <viewController storyboardIdentifier="loginVC" id="mKh-E7-ncD" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="63G-6Q-CC2"/>
+                        <viewControllerLayoutGuide type="bottom" id="tGy-qB-L6P"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xET-Ft-GKr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eaj-On-0KW" customClass="RoundCornerButton">
+                                <rect key="frame" x="195" y="277" width="210" height="45"/>
+                                <color key="backgroundColor" red="0.1803921568627451" green="0.25882352941176473" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="VMl-ag-NOP"/>
+                                    <constraint firstAttribute="width" constant="210" id="WJN-bm-hOY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Login with Facebook">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="mKh-E7-ncD" eventType="touchUpInside" id="4kn-Df-BTu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eaj-On-0KW" firstAttribute="centerY" secondItem="xET-Ft-GKr" secondAttribute="centerY" id="fkW-cj-erc"/>
+                            <constraint firstItem="eaj-On-0KW" firstAttribute="centerX" secondItem="xET-Ft-GKr" secondAttribute="centerX" id="gdI-Ht-wWD"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Login View" id="hv8-bh-xVh"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E4e-w7-uhV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2533" y="413"/>
+        </scene>
+        <!--Friends List-->
+        <scene sceneID="E1u-t0-aBP">
+            <objects>
+                <viewController storyboardIdentifier="friendListVC" id="Cuu-3H-YKZ" customClass="FriendListViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0lf-0t-wsY"/>
+                        <viewControllerLayoutGuide type="bottom" id="x1L-22-Xf9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="vD6-b6-UJg">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npS-O7-90E">
+                                <rect key="frame" x="20" y="126" width="187" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.50196081400000003" green="0.25098040700000002" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Friends List" id="00i-QC-Uxr">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="Zd3-3p-Amp">
+                            <connections>
+                                <action selector="logOutPressed:" destination="Cuu-3H-YKZ" id="5HD-hv-9cE"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Lv-ln-FEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4985" y="413"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dan-7N-Pxb">
+            <objects>
+                <navigationController storyboardIdentifier="friendListNavVC" automaticallyAdjustsScrollViewInsets="NO" id="ZZK-6u-Mob" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IZr-4E-w33">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Cuu-3H-YKZ" kind="relationship" relationship="rootViewController" id="oWI-ui-kVp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zwC-9h-3TH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4173" y="413"/>
+        </scene>
+    </scenes>
+</document>
