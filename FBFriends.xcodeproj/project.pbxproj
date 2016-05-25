@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F491F38640261B311F6C6D8 /* libPods-FBFriends.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A30046492AA49C8EB3D7CA51 /* libPods-FBFriends.a */; };
 		864049081CF5B40100ABA41A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 864049071CF5B40100ABA41A /* main.m */; };
 		8640490B1CF5B40100ABA41A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8640490A1CF5B40100ABA41A /* AppDelegate.m */; };
 		864049111CF5B40100ABA41A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8640490F1CF5B40100ABA41A /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05D6CFC3EC06D8A438407B2D /* Pods-FBFriends.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBFriends.release.xcconfig"; path = "Pods/Target Support Files/Pods-FBFriends/Pods-FBFriends.release.xcconfig"; sourceTree = "<group>"; };
 		864049031CF5B40100ABA41A /* FBFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		864049071CF5B40100ABA41A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		864049091CF5B40100ABA41A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -48,6 +50,8 @@
 		864049471CF5F87000ABA41A /* FBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBManager.m; path = Utilities/FBManager.m; sourceTree = "<group>"; };
 		864049491CF609A500ABA41A /* FriendListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendListViewController.h; path = Controller/FriendListViewController.h; sourceTree = "<group>"; };
 		8640494A1CF609A500ABA41A /* FriendListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendListViewController.m; path = Controller/FriendListViewController.m; sourceTree = "<group>"; };
+		A30046492AA49C8EB3D7CA51 /* libPods-FBFriends.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FBFriends.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB2E6956BDA4F14C68E0DB80 /* Pods-FBFriends.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBFriends.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FBFriends/Pods-FBFriends.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,7 @@
 			files = (
 				8640492D1CF5B59700ABA41A /* FBSDKLoginKit.framework in Frameworks */,
 				8640492C1CF5B59700ABA41A /* FBSDKCoreKit.framework in Frameworks */,
+				4F491F38640261B311F6C6D8 /* libPods-FBFriends.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +73,8 @@
 			children = (
 				864049051CF5B40100ABA41A /* FBFriends */,
 				864049041CF5B40100ABA41A /* Products */,
+				BCB4138D5BC7BCFF3ADD7543 /* Pods */,
+				D515962A4565EA1209C3C50E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,6 +180,23 @@
 			name = Localizing;
 			sourceTree = "<group>";
 		};
+		BCB4138D5BC7BCFF3ADD7543 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB2E6956BDA4F14C68E0DB80 /* Pods-FBFriends.debug.xcconfig */,
+				05D6CFC3EC06D8A438407B2D /* Pods-FBFriends.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D515962A4565EA1209C3C50E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A30046492AA49C8EB3D7CA51 /* libPods-FBFriends.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -180,9 +204,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8640491A1CF5B40100ABA41A /* Build configuration list for PBXNativeTarget "FBFriends" */;
 			buildPhases = (
+				E15BD8CF6F6C26AB36FD8743 /* 📦 Check Pods Manifest.lock */,
 				864048FF1CF5B40100ABA41A /* Sources */,
 				864049001CF5B40100ABA41A /* Frameworks */,
 				864049011CF5B40100ABA41A /* Resources */,
+				1525B352D6F89F51AB741958 /* 📦 Embed Pods Frameworks */,
+				1DE459552497E56B3D04F0FD /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -238,6 +265,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1525B352D6F89F51AB741958 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FBFriends/Pods-FBFriends-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1DE459552497E56B3D04F0FD /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FBFriends/Pods-FBFriends-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E15BD8CF6F6C26AB36FD8743 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		864048FF1CF5B40100ABA41A /* Sources */ = {
@@ -363,6 +438,7 @@
 		};
 		8640491B1CF5B40100ABA41A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB2E6956BDA4F14C68E0DB80 /* Pods-FBFriends.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -379,6 +455,7 @@
 		};
 		8640491C1CF5B40100ABA41A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05D6CFC3EC06D8A438407B2D /* Pods-FBFriends.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -412,6 +489,7 @@
 				8640491C1CF5B40100ABA41A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
