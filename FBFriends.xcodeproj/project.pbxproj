@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4F491F38640261B311F6C6D8 /* libPods-FBFriends.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A30046492AA49C8EB3D7CA51 /* libPods-FBFriends.a */; };
+		862F354C1CF620A30036CCAD /* FBUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 862F354B1CF620A30036CCAD /* FBUser.m */; };
+		862F354F1CF631F80036CCAD /* FBUserFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = 862F354E1CF631F80036CCAD /* FBUserFriend.m */; };
+		862F35521CF63C410036CCAD /* RoundImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 862F35511CF63C410036CCAD /* RoundImageView.m */; };
+		862F35551CF63F0F0036CCAD /* AppWebService.m in Sources */ = {isa = PBXBuildFile; fileRef = 862F35541CF63F0F0036CCAD /* AppWebService.m */; };
+		862F35581CF643B60036CCAD /* FriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 862F35571CF643B60036CCAD /* FriendCell.m */; };
 		864049081CF5B40100ABA41A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 864049071CF5B40100ABA41A /* main.m */; };
 		8640490B1CF5B40100ABA41A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8640490A1CF5B40100ABA41A /* AppDelegate.m */; };
 		864049111CF5B40100ABA41A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8640490F1CF5B40100ABA41A /* Main.storyboard */; };
@@ -26,6 +31,16 @@
 
 /* Begin PBXFileReference section */
 		05D6CFC3EC06D8A438407B2D /* Pods-FBFriends.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FBFriends.release.xcconfig"; path = "Pods/Target Support Files/Pods-FBFriends/Pods-FBFriends.release.xcconfig"; sourceTree = "<group>"; };
+		862F354A1CF620A30036CCAD /* FBUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBUser.h; path = Model/FBUser.h; sourceTree = "<group>"; };
+		862F354B1CF620A30036CCAD /* FBUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBUser.m; path = Model/FBUser.m; sourceTree = "<group>"; };
+		862F354D1CF631F80036CCAD /* FBUserFriend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBUserFriend.h; path = Model/FBUserFriend.h; sourceTree = "<group>"; };
+		862F354E1CF631F80036CCAD /* FBUserFriend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBUserFriend.m; path = Model/FBUserFriend.m; sourceTree = "<group>"; };
+		862F35501CF63C410036CCAD /* RoundImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoundImageView.h; path = View/RoundImageView.h; sourceTree = "<group>"; };
+		862F35511CF63C410036CCAD /* RoundImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoundImageView.m; path = View/RoundImageView.m; sourceTree = "<group>"; };
+		862F35531CF63F0F0036CCAD /* AppWebService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppWebService.h; path = Utilities/AppWebService.h; sourceTree = "<group>"; };
+		862F35541CF63F0F0036CCAD /* AppWebService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppWebService.m; path = Utilities/AppWebService.m; sourceTree = "<group>"; };
+		862F35561CF643B60036CCAD /* FriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FriendCell.h; path = Cell/FriendCell.h; sourceTree = "<group>"; };
+		862F35571CF643B60036CCAD /* FriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FriendCell.m; path = Cell/FriendCell.m; sourceTree = "<group>"; };
 		864049031CF5B40100ABA41A /* FBFriends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FBFriends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		864049071CF5B40100ABA41A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		864049091CF5B40100ABA41A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -129,6 +144,10 @@
 		8640491E1CF5B48500ABA41A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				862F354A1CF620A30036CCAD /* FBUser.h */,
+				862F354B1CF620A30036CCAD /* FBUser.m */,
+				862F354D1CF631F80036CCAD /* FBUserFriend.h */,
+				862F354E1CF631F80036CCAD /* FBUserFriend.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -136,6 +155,8 @@
 		8640491F1CF5B49600ABA41A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				862F35561CF643B60036CCAD /* FriendCell.h */,
+				862F35571CF643B60036CCAD /* FriendCell.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -150,6 +171,8 @@
 				864049421CF5DAC700ABA41A /* ConstantValue.h */,
 				864049461CF5F87000ABA41A /* FBManager.h */,
 				864049471CF5F87000ABA41A /* FBManager.m */,
+				862F35531CF63F0F0036CCAD /* AppWebService.h */,
+				862F35541CF63F0F0036CCAD /* AppWebService.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -168,6 +191,8 @@
 			children = (
 				8640493B1CF5C2C900ABA41A /* RoundCornerButton.h */,
 				8640493C1CF5C2C900ABA41A /* RoundCornerButton.m */,
+				862F35501CF63C410036CCAD /* RoundImageView.h */,
+				862F35511CF63C410036CCAD /* RoundImageView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -321,11 +346,16 @@
 			files = (
 				8640494B1CF609A500ABA41A /* FriendListViewController.m in Sources */,
 				864049391CF5B9C600ABA41A /* LoginViewController.m in Sources */,
+				862F354F1CF631F80036CCAD /* FBUserFriend.m in Sources */,
+				862F35521CF63C410036CCAD /* RoundImageView.m in Sources */,
 				864049361CF5B92C00ABA41A /* AppLogs.m in Sources */,
 				8640490B1CF5B40100ABA41A /* AppDelegate.m in Sources */,
 				8640493D1CF5C2C900ABA41A /* RoundCornerButton.m in Sources */,
+				862F35581CF643B60036CCAD /* FriendCell.m in Sources */,
 				864049401CF5CBBD00ABA41A /* Utility.m in Sources */,
 				864049081CF5B40100ABA41A /* main.m in Sources */,
+				862F354C1CF620A30036CCAD /* FBUser.m in Sources */,
+				862F35551CF63F0F0036CCAD /* AppWebService.m in Sources */,
 				864049481CF5F87000ABA41A /* FBManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

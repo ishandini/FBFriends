@@ -16,6 +16,7 @@
 @optional
 - (void)loginFailWithError:(NSString *)error;
 - (void)loginSuccess;
+- (void)didReciveInformation:(NSDictionary *)dicInfo;
 
 
 @end

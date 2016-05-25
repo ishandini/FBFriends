@@ -10,6 +10,8 @@
 #import "Utility.h"
 #import "AppLogs.h"
 #import "ConstantValue.h"
+#import "FBUser.h"
+#import "FBUserFriend.h"
 
 @interface FBManager() {
 
@@ -73,15 +75,58 @@
         [[[FBSDKGraphRequest alloc] initWithGraphPath:@"me" parameters:[sharedUtility getFBGraphPermisions]]
          startWithCompletionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
              if (!error) {
-                 NSLog(@"resultis: %@",result);
+                
+                 [self.delegate didReciveInformation:[self readUserInfo:result]];
+                 
                  
              } else {
-                 NSLog(@"Error %@",error);
+                
+                 [AppLogs print:error.localizedDescription];
              }
          }];
         
     }
     
+}
+
+
+- (NSDictionary *)readUserInfo:(id)result {
+    
+    // user info
+    NSString *fbUserId = [result objectForKey:@"id"];
+    NSString *fullName = [result objectForKey:@"name"];
+    NSString *imgUrl = [[[result objectForKey:@"picture"] objectForKey:@"data"] objectForKey:@"url"];
+    
+    FBUser *fbUser = [FBUser initWithFBUserID:fbUserId];
+    fbUser.fullName = fullName;
+    fbUser.picUrl = imgUrl;
+    
+    
+    // friends info
+    NSArray *friendsDataArray = [[result objectForKey:@"friends"] objectForKey:@"data"];
+    
+    // create friend list array
+    NSMutableArray *friendsListArray = [[NSMutableArray alloc] init];
+    
+    for (NSDictionary *dicFriends in friendsDataArray) {
+        
+        NSString *friendId = [dicFriends objectForKey:@"id"];
+        NSString *friendName = [dicFriends objectForKey:@"name"];
+        
+        FBUserFriend *userFriend = [FBUserFriend initWithFBUserFriendID:friendId];
+        userFriend.fullName = friendName;
+        
+        [friendsListArray addObject:userFriend];
+    }
+    
+    
+    // finaly we need to return current user and friendlist array.
+    // prefered to use Dictionary
+    // KEY--  CURRENT_USER, FRIENDS_LIST
+    
+    NSDictionary *dicInfoResult = @{CURRENT_USER : fbUser, FRIENDS_LIST : friendsListArray};
+    
+    return dicInfoResult;
 }
 
 @end

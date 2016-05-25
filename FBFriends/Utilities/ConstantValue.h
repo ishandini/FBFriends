@@ -9,8 +9,6 @@
 #ifndef ConstantValue_h
 #define ConstantValue_h
 
-// UserDefaults
-#define USER_DEFAULTS [NSUserDefaults standardUserDefaults]
 
 // FB E-mail key
 #define KEY_EMAIL         @"email"
@@ -21,6 +19,13 @@
 #define LOGIN_VC            @"loginVC"
 #define FRIEND_LIST_NAV_VC  @"friendListNavVC"
 
+
+// dictionary key
+#define CURRENT_USER @"CURRENT_USER"
+#define FRIENDS_LIST @"FRIENDS_LIST"
+
+// tableview cell identifier
+#define CELL        @"Cell"
 
 
 #endif /* ConstantValue_h */
